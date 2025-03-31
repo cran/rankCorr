@@ -84,6 +84,6 @@ weights = "clusters")
 \tabular{ll}{
 Tu, S., Li, C., Zeng, D., and Shepherd, B. E. (2023). Rank intraclass correlation for clustered data. Statistics in Medicine 42, 4333-4348. \cr
 Shih, J. H. and Fay, M. P. (2017). Pearson's chi-square test and rank correlation inferences for clustered data. Biometrics 73, 822-834. \cr
-Tu S, Li C, Shepherd BE (2023). Between- and within-cluster Spearman rank correlations. \cr
+Tu, S., Li, C., and Shepherd, B. E. (2024). Between- and within-cluster Spearman rank correlations. Statistics in Medicine, 44(3-4), e10326. \cr
 }
 }

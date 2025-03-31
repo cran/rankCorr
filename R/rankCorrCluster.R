@@ -30,7 +30,7 @@
 #' \tabular{ll}{
 #' Tu, S., Li, C., Zeng, D., and Shepherd, B. E. (2023). Rank intraclass correlation for clustered data. Statistics in Medicine 42, 4333-4348. \cr
 #' Shih, J. H. and Fay, M. P. (2017). Pearson's chi-square test and rank correlation inferences for clustered data. Biometrics 73, 822-834. \cr
-#' Tu S, Li C, Shepherd BE (2023). Between- and within-cluster Spearman rank correlations. \cr
+#' Tu, S., Li, C., and Shepherd, B. E. (2024). Between- and within-cluster Spearman rank correlations. Statistics in Medicine, 44(3-4), e10326. \cr
 #' }
 #'
 #' @examples
@@ -83,8 +83,8 @@ rankCorrCluster <- function(x, y, cluster,
   x <- x[order(cluster)]
   y <- y[order(cluster)]
   cluster <- sort(cluster)
-  score.y <- scores_presid(y = y, X = cluster, link.x[1])
-  score.x <- scores_presid(y = x, X = cluster, link.y[1])
+  score.y <- scores_presid(y = y, X = cluster, link.y[1])
+  score.x <- scores_presid(y = x, X = cluster, link.x[1])
   ##########within-cluster correlation
   ki <- tabulate(cluster)
   n.cluster <- length(unique(cluster))
