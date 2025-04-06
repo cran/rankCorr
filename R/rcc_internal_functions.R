@@ -19,8 +19,12 @@ scores_presid <- function (y, X, lnk){
   for (i in 1 : N){
     ki <- k[i]
     g <- alpha + beta[i]
-    muij <- 1 - mod$trans$cumprob(g)
-    tmp <-  mod$trans$deriv(x = g, f = muij)
+    cumprob <- eval(mod$famfunctions[1])
+    muij <- 1 - cumprob(g)
+    deriv <- eval(mod$famfunctions[3])
+    tmp <-  deriv(x = g, f = muij)
+    #muij <- 1 - mod$trans$cumprob(g)
+    #tmp <-  mod$trans$deriv(x = g, f = muij)
     tmp <- ifelse(tmp < 1e-16, 1e-16, tmp)
     dmij.dg <- - tmp
     dmij.dalpha <- diag(dmij.dg)
